@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Register of Clients</title>
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+</head>
+<body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                <a class="nav-link" href="#">Features</a>
+                <a class="nav-link" href="#">Pricing</a>
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </div>
+        </div>
+    </div>
+</nav>
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-6 col md-6 col-sm-6 container justify-contant-center card">
+            <h1 class="text-center"> Register of clients</h1>
+            <div class="card-body">
+                <form th:action="@{/Client/all}" th:object="${client}" method="POST">
+
+                     <div class="form-group">
+                        <label> Firstname:</label>
+                        <input type = "text" Firstname="Firstname" th:field ="*{Firstname}" class="form-control" placeholder=" Write the Firstname:" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label> Surname:</label>
+                        <input type = "text" Surname="Surname" th:field ="*{Surname}" class="form-control" placeholder=" Write the Surname:" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label> Telephone:</label>
+                        <input type = "text" Telephone="Telephone" th:field ="*{Telephone}" class="form-control" placeholder=" Write the Telephone:" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                        <label> Email:</label>
+                        <input type = "text" Email="Email" th:field ="*{Email}" class="form-control" placeholder=" Write the Email:" required>
+                    </div>
+                    <br>
+                    <div class="form-group">
+                              <label> Date of birthday:</label>
+                              <input type = "text" Date of birthday="Date of birthday" th:field ="*{dateofbirthday}" class="form-control" placeholder=" Write the Date of birthday:" required>
+                          </div>
+                          <br>
+                          <div class="box-footer">
+                              <button class="btn btn-success"> Guardar </button>
+                          </div>
+                       </form>
+                  </div>
+
+              </div>
+
+          </div>
+
+      </div>
+
+
+
+      </body>
+      </html>
