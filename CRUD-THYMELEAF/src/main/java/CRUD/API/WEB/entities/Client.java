@@ -2,6 +2,7 @@ package CRUD.API.WEB.entities;
 
 
 import jakarta.persistence.*;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 import java.util.Date;
@@ -27,7 +28,8 @@ public class Client {
     private String email;
 
    @Column
-    private LocalDate dateofbirthday;
+   @DateTimeFormat(pattern = "yyyy-MM-dd")
+   private LocalDate dateofbirthday;
 
     public Client() {
     }

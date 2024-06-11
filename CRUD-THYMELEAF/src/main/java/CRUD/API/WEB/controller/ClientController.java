@@ -111,7 +111,7 @@ public class ClientController {
         }
 
     } */
-    @GetMapping("/{id}")
+    @GetMapping("/delete/{id}")
     public String deleteClient(@PathVariable Long id){
         clientServiceImpl.deleteClient(id);
         return "redirect:/Client/all";

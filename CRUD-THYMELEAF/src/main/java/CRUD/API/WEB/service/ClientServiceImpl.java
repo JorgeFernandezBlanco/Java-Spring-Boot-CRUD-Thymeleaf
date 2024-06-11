@@ -4,6 +4,7 @@ package CRUD.API.WEB.service;
 import CRUD.API.WEB.entities.Client;
 import CRUD.API.WEB.repository.ClientRepository;
 import jakarta.persistence.EntityNotFoundException;
+import org.antlr.v4.runtime.misc.NotNull;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -17,7 +18,7 @@ public class ClientServiceImpl implements ClientService {
 
     //Create
     @Override
-    public Client saveClient (Client client) {
+    public Client saveClient (@NotNull Client client) {
         return clientRepository.save(client);
     }
 

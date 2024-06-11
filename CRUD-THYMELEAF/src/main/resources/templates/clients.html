@@ -42,7 +42,7 @@
              <td th:text="${client.dateofbirthday}"> Date of birthday</td>
              <td>
                     <a th:href="@{/Client/edit/{id}(id=${client.id})}" class="btn btn-info"> Edit</a>
-                    <a th:href="@{/Client/{id}(id=${client.id})}" class="btn btn-danger"> Delete</a>
+                    <a th:href="@{/Client/delete/{id}(id=${client.id})}" class="btn btn-danger"> Delete</a>
 
              </td>
          </tr>
